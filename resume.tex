@@ -1,70 +1,67 @@
 \documentclass[]{article}
 \setlength\parindent{0pt}
-\def\bar{\hrule}
+
+% Custom itemize bullet
 \def\labelitemi{--}
 
+% Define a new section on resume
+\def \mysection[#1]{
+\vspace{.3cm}
+\hrule
+\vspace{.3cm}
+{\large #1 \par}
+\vspace{.2cm}
+}
+
 \usepackage{color,graphicx,hyperref,multirow,enumitem}
+\usepackage[margin=1.5in]{geometry}
 
 \definecolor{linkcolour}{rgb}{0,0,0}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \pagenumbering{gobble}
 
 \begin{document}
 
-\par{\centering
-        {\Huge Joshua Howard
-}\par} 
-\vspace{.3cm}
-\bar
-\vspace{.3cm}
-{\large Contact Information \par} 
-\vspace{.3cm}
-\begin{tabular}{rl}
-    Address:   & 1575 Spring Pl. NW \\  &  Washington, DC 20010 
-\end{tabular}
-\begin{tabular}{rl}
-    Phone: & 423-834-2872\\
-    Email: & \href{mailto:joshthoward@gmail.com}{joshthoward@gmail.com} \\
-    Website: & \href{http://jo8hua.github.io}{jo8hua.github.io}
-\end{tabular} 
+\par{\centering {\Huge Joshua Howard }\par} 
 
 \vspace{.3cm}
-\bar 
-\vspace{.3cm}
-{\large Education \par} 
-\vspace{.3cm}
-\begin{tabular}{c lr}
-May 2016 &
-Masters of Science in Computational Science and Engineering\\  & Georgia Institute of Technology    \hspace{10pt}GPA 3.90 \\ &
-Funded as National Science Foundation STEM Fellow
-& \\
-& \\
-Dec $\;$2014 & Bachelor of Science in Mathematics \textit{summa cum laude} \\ & Kennesaw State University\hspace{10pt}GPA 3.98 \\
-\end{tabular}\\
-\vspace{.3cm}
-\bar
-\vspace{.3cm}
-{\large Experience \par} 
-\vspace{.3cm}
-\textbf{Software Engineer} IERUS Technologies, Inc. \\
-Present - May 2016, As a member of a technology startup and subcontractor to the NSWCCD my achievements are
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l c r@{}}
+Email: \href{mailto:joshthoward@gmail.com}{joshthoward@gmail.com} &
+Phone: 423-834-2872 &
+Website: \href{http://jo8hua.github.io}{jo8hua.github.io}
+\end{tabular}}
+
+\mysection[Summary] 
+An accomplished engineer with significant professional experience in developing agile and innovative technologies within the disciplines of machine learning and data science.
+
+\mysection[Experience]
+\textbf{Machine Learning Engineer} at IERUS Technologies, Inc. \hfill May 2016 - Present\\
+Developed GPU accelerated and distributed signal and data processing algorithms while providing engineering consulting services for Leidos, Engineering LLC, NSWCCD, MDA, and Raytheon. 
+
 \begin{itemize}[leftmargin=*, topsep=.5em, itemsep=.25em]
-\item Implementing distributed and parallel algorithms at scale and optimized for dedicated hardware configurations
-\item Contributing as machine learning subject matter expert on character and Inverse Synthetic Aperture Radar (ISAR) image recognition for Small Business Innovation Research (SBIR) contracts and grants.
-\item Acquiring and managed affiliations with Leidos, Engineering LLC.  
+\item Served as the machine learning subject matter expert on ISAR and EOIR image classification and material parameter extraction technologies. 
+\item Authored multiple Small Business Innovation Research (SBIR) and Technology Transfer (STTR) grants, business proposals, and whitepapers with awards exceeding \$5 million. 
 \end{itemize}
-\vspace{.2cm}
-\textbf{Teaching Assistant} Georgia Institute of Technology\\
-January 2015 to April 2016, As a lecturer of multivariate calculus, linear algebra, and discrete mathematics my achievements were
+
+\textbf{Graduate Assistant} at The Georgia Institute of Technology \hfill Jan. 2015 - Apr. 2016\\
+Taught engineering topics in multivariate calculus, linear algebra, and discrete mathematics and conducted and attended seminars on research in the fields of probability, machine learning, and data science.
 \begin{itemize}[leftmargin=*, topsep=.5em, itemsep=.25em]
-\item Developing and distributing software to aid in student understanding
-\item Attaining the highest class averages on standardized course assessments for three consecutive semesters
+\item Proof of concept application for machine learning based disease diagnosis featured by school of electrical engineering.
 \end{itemize}
-\vspace{.2cm}
-\bar
-\vspace{.3cm}
-{\large Technologies \par} 
-\vspace{.3cm}
-Python, Scala, Java, C/C++, Javascript, D3, Angular JS, Node JS,  Hadoop, Spark, TensorFlow, Scikit Learn, Linux, Mac OS, and Amazon Web Services \\
-\bar
+
+\textbf{Undergraduate Researcher} at Kennesaw State University \hfill Jan. 2014 - Dec. 2014\\
+Worked within the college of science researching and implementing optimization and control theory algorithms in the context of the interdisciplinary computational sustainability field.
+\begin{itemize}[leftmargin=*, topsep=.5em, itemsep=.25em]
+\item Contributions were acknowledged at the university's 2014 Symposium of Student Scholars.
+\end{itemize}
+
+\mysection[Education]
+\textbf{Computational Science and Engineering, M.S.}\hfill May 2016\\\textit{Recipient of National Science Foundation STEM Fellowship}\\Georgia Institute of Technology\hspace{10pt}GPA 3.90\\
+
+\textbf{Mathematics, B.S.}\hfill Dec. 2014\\\textit{Summa cum laude}\\ Kennesaw State University\hspace{10pt}GPA 3.98
+
+\mysection[Technologies]
+Python, Scala, Java, C/C++, Hadoop, Spark, SQL, TensorFlow, Theano, Scikit Learn, HTML, CSS, Javascript, Node.js, D3, Git, Mercurial, Linux, Mac OS, Amazon Web Services \\
+\hrule
 \end{document}
